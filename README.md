@@ -1,5 +1,5 @@
 
-# Anemometer Project
+# MARK-2 Project
 
 This project is a refactored, industrial-grade firmware for an ESP32-based 4-Wheeler. The code has been reorganized using a class-based, object-oriented approach in C++ to improve modularity, maintainability, and readability—all while preserving the original logic.
 
