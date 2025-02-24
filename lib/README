@@ -4,33 +4,32 @@ PlatformIO will compile them to static libraries and link into the executable fi
 
 The source code of each library should be placed in a separate directory
 ("lib/your_library_name/[Code]").
-
-For example, see the structure of the following example libraries `Foo` and `Bar`:
-
-|--lib
-|  |
-|  |--Bar
-|  |  |--docs
-|  |  |--examples
-|  |  |--src
-|  |     |- Bar.c
-|  |     |- Bar.h
-|  |  |- library.json (optional. for custom build options, etc) https://docs.platformio.org/page/librarymanager/config.html
-|  |
-|  |--Foo
-|  |  |- Foo.c
-|  |  |- Foo.h
-|  |
-|  |- README --> THIS FILE
-|
-|- platformio.ini
-|--src
-   |- main.c
-
-Example contents of `src/main.c` using Foo and Bar:
 ```
-#include <Foo.h>
-#include <Bar.h>
+Mark - 2/
+├── lib
+│   ├── BluetoothHandler
+│   │   ├── BluetoothHandler.h
+│   │   └── BluetoothHandler.cpp
+│   ├── BT_String
+│   │   └── BluetoothCommand.h
+│   ├── Motor
+│   │   ├── Motor.h
+│   │   └── Motor.cpp
+│   ├── PinDef
+│   │   ├── PinDef.h
+│   │   └── PinDef.cpp
+│   └── StateMachine
+│       ├── RobotController.h
+│       └── RobotController.cpp
+└── src
+    └── main.cpp
+```
+Example contents of `src/main.c` 
+```
+#include "RobotController.h"
+#include "BluetoothCommand.h" 
+#include <Arduino.h>
+#include "PinDef.h"
 
 int main (void)
 {
