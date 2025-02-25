@@ -38,6 +38,24 @@ void Motor::disable() {
   analogWrite(PinDef::ENB, 0);
 }
 
+void Motor::forward(int pwm){
+  digitalWrite(PinDef::IN1, HIGH);
+  digitalWrite(PinDef::IN2, HIGH);
+  digitalWrite(PinDef::IN3, HIGH);
+  digitalWrite(PinDef::IN4, HIGH);
+  analogWrite(PinDef::ENA, pwm);
+  analogWrite(PinDef::ENB, pwm);
+}
+
+void Motor::backward(int pwm){
+  digitalWrite(PinDef::IN1, HIGH);
+  digitalWrite(PinDef::IN2, HIGH);
+  digitalWrite(PinDef::IN3, HIGH);
+  digitalWrite(PinDef::IN4, HIGH);
+  analogWrite(PinDef::ENA, -pwm);
+  analogWrite(PinDef::ENB, -pwm);
+}
+
 void Motor::left(int pwm) {
   // Control the left motor (controlled by IN1/IN2 and ENA)
   if (pwm >= 0) {
@@ -79,5 +97,5 @@ void Motor::brake() {
   analogWrite(PinDef::ENA, 0);
   analogWrite(PinDef::ENB, 0);
   // Optionally, add a delay if you want the brake to engage for a set period:
-  // delay(500);
+  delay(500);
 }

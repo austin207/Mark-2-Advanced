@@ -17,6 +17,10 @@ public:
     void right(int pwm);
     // Brake the motors (active braking by shorting the motor terminals).
     void brake();
+
+    void forward(int pwm);
+
+    void backward(int pwm);
 };
 
 #endif // MOTOR_H
