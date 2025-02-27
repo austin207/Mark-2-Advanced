@@ -6,7 +6,7 @@ This project is a refactored, industrial-grade firmware for an ESP32-based 4-Whe
 ## Project Structure
 
 ```
-ark - 2/
+Mark - 2/
 ├── lib
 │   ├── BluetoothHandler
 │   │   ├── BluetoothHandler.h
